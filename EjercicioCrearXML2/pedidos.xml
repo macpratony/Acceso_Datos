@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pedidos>
+            
+    
+    <pedido>
+                  
+        
+        
+        <id>0001</id>
+                   
+        
+        
+        <nombre>Compras</nombre>
+                 
+        
+        
+        <dni_cliente>0101</dni_cliente>
+                 
+    
+    
+    </pedido>
+         
+    
+    
+    <pedido>
+                 
+        
+        
+        <id>0002</id>
+                 
+        
+        
+        <nombre>Gasolina</nombre>
+                        
+        
+        <dni_cliente>0303</dni_cliente>
+                    
+    
+    </pedido>
+            
+    
+    <pedido>
+                 
+        
+        
+        <id>0003</id>
+                 
+        
+        
+        <nombre>Auriculares</nombre>
+                        
+        
+        <dni_cliente>0101</dni_cliente>
+                    
+    
+    </pedido>
+         
+    
+    
+    <pedido>
+                  
+        
+        
+        <id>0003</id>
+                  
+        
+        
+        <nombre>Auriculares</nombre>
+                 
+        
+        
+        <dni_cliente>0202</dni_cliente>
+                    
+    
+    </pedido>
+            
+    
+    <pedido>
+                  
+        
+        
+        <id>0004</id>
+                        
+        
+        <nombre>Perfumes</nombre>
+                 
+        
+        
+        <dni_cliente>0303</dni_cliente>
+                    
+    
+    </pedido>
+            
+    
+    <pedido>
+                         
+        
+        
+        <id>0005</id>
+                         
+        
+        
+        <nombre>Herramientas</nombre>
+                        
+        
+        
+        <dni_cliente>0303</dni_cliente>
+                        
+    
+    
+    </pedido>
+         
+    
+
+    
+    <pedido>
+                
+        <id>00002</id>
+                
+        <nombre>lapiz</nombre>
+                
+        <dni_cliente>0101</dni_cliente>
+            
+    </pedido>
+    
+    <pedido>
+        <id>005</id>
+        <nombre>hjkihbu</nombre>
+        <dni_cliente>0303</dni_cliente>
+    </pedido>
+</pedidos>

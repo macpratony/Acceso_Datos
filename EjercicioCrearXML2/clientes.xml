@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<clientes>
+    <cliente>
+        <nombre>Ruben</nombre>
+        <dni>0101</dni>
+    </cliente>
+    <cliente>
+        <nombre>Patricio</nombre>
+        <dni>0202</dni>
+    </cliente>
+    <cliente>
+        <nombre>Carlos</nombre>
+        <dni>0303</dni>
+    </cliente>
+</clientes>
