@@ -3,13 +3,16 @@ package JaxB;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlType;
+
+@XmlType(propOrder = {"nombre","dni_jefe", "empleado"})
 public class Proyecto {
 	
 	String nombre;
 	String dni_jefe;
-	List<Empleados> empleado;
+	List<Emp_Asignados> empleado;
 	
-	public Proyecto(String nombre, String dni_jefe, List<Empleados> empleado) {
+	public Proyecto(String nombre, String dni_jefe, List<Emp_Asignados> empleado) {
 		super();
 		this.nombre = nombre;
 		this.dni_jefe = dni_jefe;
@@ -36,13 +39,13 @@ public class Proyecto {
 		this.dni_jefe = dni_jefe;
 	}
 
-	public List<Empleados> getEmpleado() {
+	public List<Emp_Asignados> getEmpleado() {
 		if(empleado == null)
-			return new ArrayList<Empleados>();
+			return new ArrayList<Emp_Asignados>();
 		return empleado;
 	}
 
-	public void setEmpleado(List<Empleados> empleado) {
+	public void setEmpleado(List<Emp_Asignados> empleado) {
 		this.empleado = empleado;
 	}
 	

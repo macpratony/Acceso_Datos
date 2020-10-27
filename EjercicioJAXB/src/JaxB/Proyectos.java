@@ -1,31 +1,35 @@
 package JaxB;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Proyectos {
 	
-	List<Proyecto> pro;
+	List<Proyecto> proyecto;
 
-	public Proyectos(List<Proyecto> pro) {
+	public Proyectos(List<Proyecto> proyecto) {
 		super();
-		this.pro = pro;
+		this.proyecto = proyecto;
 	}
 
 	public Proyectos() {
 		super();
 	}
 
-	public List<Proyecto> getPro() {
+	public List<Proyecto> getProyecto() {
 		
-		if(pro == null)
+		if(proyecto == null)
 			return new ArrayList<Proyecto>();
 		
-		return pro;
+		return proyecto;
 	}
 
-	public void setPro(List<Proyecto> pro) {
-		this.pro = pro;
+	public void setPro(List<Proyecto> proyecto) {
+		this.proyecto = proyecto;
 	}
 	
 	

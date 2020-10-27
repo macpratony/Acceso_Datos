@@ -14,6 +14,7 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JScrollBar;
 
 public class Chat1 extends JFrame {
 
@@ -56,7 +57,7 @@ public class Chat1 extends JFrame {
 		contentPane.setLayout(null);
 		
 		//JLabel lblRecibe2 = new JLabel("");
-		lblRecibe2.setBounds(0, 37, 434, 182);
+		lblRecibe2.setBounds(0, 36, 434, 182);
 		contentPane.add(lblRecibe2);
 		
 		textTexto2 = new JTextField();
@@ -67,7 +68,7 @@ public class Chat1 extends JFrame {
 		JButton btnEnviar2 = new JButton("ENVIAR");
 		btnEnviar2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				/*
 					Runnable r = new Escribir(escribe);
 					Thread t = new Thread(r);
 					
@@ -75,7 +76,12 @@ public class Chat1 extends JFrame {
 					Thread t1 = new Thread(r1);
 				
 					t.start();
-					t1.start();
+					t1.start();*/
+				Thread r = new Escribir(escribe);
+				r.start();
+				
+				Thread t = new LeerDos(Chat2.lee);
+				t.start();
 					
 				textTexto2.setText("");
 				
@@ -87,11 +93,14 @@ public class Chat1 extends JFrame {
 		JLabel lblNewLabel = new JLabel("CHAT 1");
 		lblNewLabel.setBounds(165, 0, 139, 25);
 		contentPane.add(lblNewLabel);
+		
+		JScrollBar scrollBar = new JScrollBar();
+		scrollBar.setBounds(417, 37, 17, 182);
+		contentPane.add(scrollBar);
 	}
-
 }
 
- class Leer implements Runnable{
+ class Leer extends Thread{
 	
 	private  PipedInputStream lee;
 
@@ -105,17 +114,21 @@ public class Chat1 extends JFrame {
 		String cadena = "";
 	
 		try {
-			
+		
 			
 			while((n=lee.read()) != -1) {
 				char a = (char) n;
-				cadena += a;
+				cadena += a+"\n";
+				
 			
 			}
 			
-			Chat1.lblRecibe2.setText(cadena +"                 "+"Chat 2.1");
+			Chat1.lblRecibe2.setText("chat 2     "+cadena);
 			
+		
 			lee.close();
+			
+			
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -126,7 +139,7 @@ public class Chat1 extends JFrame {
 	}
 	
 }
- class Escribir implements Runnable {
+ class Escribir extends Thread {
 		
 		private  PipedOutputStream escribe;
 
@@ -141,7 +154,6 @@ public class Chat1 extends JFrame {
 			String cadena = Chat1.textTexto2.getText();
 			
 			
-			
 				for(int i=0; i<cadena.length(); i++) {
 					int n = cadena.charAt(i);
 					
@@ -149,9 +161,10 @@ public class Chat1 extends JFrame {
 					//escribe.flush();
 					
 				}
-			
-			
 			escribe.close();
+				Chat1.lblRecibe2.setText("Chat 1     "+cadena);
+			
+			
 			
 			} catch (IOException e) {
 					

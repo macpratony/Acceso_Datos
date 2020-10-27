@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alumnos>
+    <alumno nota="10">
+        <dni>111</dni>
+        <asignaturas>
+            <nombre>lengua</nombre>
+            <profesor>javi</profesor>
+        </asignaturas>
+        <asignaturas>
+            <nombre>mates</nombre>
+            <profesor>ana</profesor>
+        </asignaturas>
+    </alumno>
+    <alumno nota="8">
+        <dni>222</dni>
+        <asignaturas>
+            <nombre>lengua</nombre>
+            <profesor>javi</profesor>
+        </asignaturas>
+        <asignaturas>
+            <nombre>mates</nombre>
+            <profesor>ana</profesor>
+        </asignaturas>
+    </alumno>
+</alumnos>

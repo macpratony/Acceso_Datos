@@ -13,8 +13,8 @@ public class Principal {
 		chat2.setVisible(true);
 		
 		
-			chat1.leer.connect(chat2.escribir);
-			chat2.lee.connect(chat1.escribe);
+			Chat1.leer.connect(Chat2.escribir);
+			Chat2.lee.connect(Chat1.escribe);
 			
 			
 		

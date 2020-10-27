@@ -71,7 +71,7 @@ public class Chat2 extends JFrame {
 		btnEnviar.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
-			
+			/*
 				Runnable r = new EscribirDos(escribir);
 				Thread t = new Thread(r);
 				
@@ -79,7 +79,13 @@ public class Chat2 extends JFrame {
 				Thread t2 = new Thread(r1);
 			
 				t.start();
-				t2.start();
+				t2.start();*/
+				Thread w = new EscribirDos(escribir);
+				w.start();
+				
+				Thread r = new Leer(Chat1.leer);
+				r.start();
+			
 				
 			
 				
@@ -95,7 +101,7 @@ public class Chat2 extends JFrame {
 		contentPane.add(lblNewLabel);
 	}
 }
-class LeerDos implements Runnable{
+class LeerDos extends Thread{
 	
 	private PipedInputStream lee;
 
@@ -109,16 +115,17 @@ class LeerDos implements Runnable{
 		String cadena = "";
 	
 		try {
+
+				while((n=lee.read()) != -1) {
+					char a = (char) n;
+					cadena += a;
+					
+				}
 			
+				Chat2.lblRecibe.setText("Chat 1     "+cadena);
+				
+				lee.close();
 			
-			while((n=lee.read()) != -1) {
-				char a = (char) n;
-				cadena += a;
-			
-			}
-			
-			Chat2.lblRecibe.setText(cadena +"                 "+"Chat 1");
-			lee.close();
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -129,7 +136,7 @@ class LeerDos implements Runnable{
 	}
 	
 }
-class EscribirDos implements Runnable {
+class EscribirDos extends Thread {
 		
 		private PipedOutputStream escribe;
 	
@@ -154,7 +161,7 @@ class EscribirDos implements Runnable {
 				
 			
 				
-			escribe.close();
+			//escribe.close();
 			
 			} catch (IOException e) {
 					
