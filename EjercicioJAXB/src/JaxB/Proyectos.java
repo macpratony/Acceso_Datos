@@ -17,18 +17,18 @@ public class Proyectos {
 	}
 
 	public Proyectos() {
-		super();
+	
 	}
 
 	public List<Proyecto> getProyecto() {
 		
-		if(proyecto == null)
-			return new ArrayList<Proyecto>();
+		/*if(proyecto == null)
+			return new ArrayList<Proyecto>();*/
 		
 		return proyecto;
 	}
 
-	public void setPro(List<Proyecto> proyecto) {
+	public void setProyecto(List<Proyecto> proyecto) {
 		this.proyecto = proyecto;
 	}
 	

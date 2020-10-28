@@ -1,27 +1,25 @@
 package JaxB;
 
+import java.util.List;
+
 public class Emp_Asignados {
 	
-	String dni;
+	List<String> dni;
 
-	
-
-	public Emp_Asignados(String dni) {
+	public Emp_Asignados(List<String> dni) {
 		super();
 		this.dni = dni;
 	}
 
-	
 	public Emp_Asignados() {
 		super();
 	}
 
-
-	public String getDni_empleado() {
+	public List<String> getDni() {
 		return dni;
 	}
 
-	public void setDni_empleado(String dni) {
+	public void setDni(List<String> dni) {
 		this.dni = dni;
 	}
 	

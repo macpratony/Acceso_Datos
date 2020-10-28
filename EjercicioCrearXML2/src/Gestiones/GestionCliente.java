@@ -115,7 +115,7 @@ public class GestionCliente extends JFrame {
 					Document documento = builder.parse(new File("pedidos.xml"));
 						Node nodo = documento.getFirstChild();
 						
-						EliminarPedido.eliminaPedido(nodo, documento);
+						EliminarPedido.eliminaPedido(documento);
 						
 					} catch (SAXException e1) {
 						// TODO Auto-generated catch block

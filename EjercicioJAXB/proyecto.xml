@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<proyectos>
+    <proyecto>
+        <nombre>Informatica</nombre>
+        <dni_jefe>0101</dni_jefe>
+        <empleado>
+            <dni>111</dni>
+            <dni>222</dni>
+            <dni>333</dni>
+        </empleado>
+    </proyecto>
+    <proyecto>
+        <nombre>Contabilidad</nombre>
+        <dni_jefe>0202</dni_jefe>
+        <empleado>
+            <dni>444</dni>
+            <dni>666</dni>
+        </empleado>
+    </proyecto>
+</proyectos>
