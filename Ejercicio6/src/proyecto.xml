@@ -23,7 +23,7 @@
     </proyecto>
     <proyecto>
         <nombre>Contabilidad</nombre>
-        <dni_jefe>1010</dni_jefe>
+        <dni_jefe>2020</dni_jefe>
         <emp_asignados>
             <dni>11111</dni>
             <dni>22222</dni>
@@ -32,7 +32,7 @@
     </proyecto>
     <proyecto>
         <nombre>Fisica</nombre>
-        <dni_jefe>1010</dni_jefe>
+        <dni_jefe>2020</dni_jefe>
         <emp_asignados>
             <dni>11111</dni>
             <dni>22222</dni>

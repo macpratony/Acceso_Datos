@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<shiporder orderid="1">
+    <orderperson>Juan</orderperson>
+    <shipto>
+        <name>Raul</name>
+        <address>Calle gran via</address>
+        <city>Madrid</city>
+        <country>España</country>
+    </shipto>
+    <item>
+        <title>Cuadernos</title>
+        <note>Bueno</note>
+        <quantity>3</quantity>
+        <price>7.20000000000000017763568394002504646778106689453125</price>
+    </item>
+    <item>
+        <note>Malo</note>
+        <quantity>5</quantity>
+        <price>5.29999999999999982236431605997495353221893310546875</price>
+    </item>
+</shiporder>

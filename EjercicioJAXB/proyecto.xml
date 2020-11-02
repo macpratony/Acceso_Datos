@@ -1,20 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <proyectos>
+
+    <proyecto>
+    
+        <nombre>Software</nombre>
+        <dni_jefe>2020</dni_jefe>
+        <emp_asignados>
+            <dni>11111</dni>
+            <dni>22222</dni>
+        </emp_asignados>
+        
+    </proyecto> 
     <proyecto>
         <nombre>Informatica</nombre>
-        <dni_jefe>0101</dni_jefe>
-        <empleado>
-            <dni>111</dni>
-            <dni>222</dni>
-            <dni>333</dni>
-        </empleado>
+        <dni_jefe>2020</dni_jefe>
+        <emp_asignados>
+            <dni>11111</dni>
+            <dni>22222</dni>
+            <dni>33333</dni>
+            <dni>44444</dni>
+        </emp_asignados>
     </proyecto>
     <proyecto>
         <nombre>Contabilidad</nombre>
-        <dni_jefe>0202</dni_jefe>
-        <empleado>
-            <dni>444</dni>
-            <dni>666</dni>
-        </empleado>
+        <dni_jefe>2020</dni_jefe>
+        <emp_asignados>
+            <dni>11111</dni>
+            <dni>22222</dni>
+            <dni>33333</dni>
+        </emp_asignados>
     </proyecto>
+    <proyecto>
+        <nombre>Fisica</nombre>
+        <dni_jefe>1010</dni_jefe>
+        <emp_asignados>
+            <dni>11111</dni>
+            <dni>22222</dni>
+        </emp_asignados>
+    </proyecto>
+    
 </proyectos>

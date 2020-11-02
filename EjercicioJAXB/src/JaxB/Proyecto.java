@@ -2,18 +2,18 @@ package JaxB;
 
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType(propOrder = {"nombre","dni_jefe", "empleado"})
+@XmlType(propOrder = {"nombre","dni_jefe", "emp_asignados"})
 public class Proyecto {
 	
 	String nombre;
 	String dni_jefe;
-	Emp_Asignados empleado;
+	Emp_Asignados emp_asignados;
 	
-	public Proyecto(String nombre, String dni_jefe, Emp_Asignados empleado) {
+	public Proyecto(String nombre, String dni_jefe, Emp_Asignados emp_asignados) {
 		super();
 		this.nombre = nombre;
 		this.dni_jefe = dni_jefe;
-		this.empleado = empleado;
+		this.emp_asignados = emp_asignados;
 	}
 	
 	public Proyecto() {
@@ -31,11 +31,11 @@ public class Proyecto {
 	public void setDni_jefe(String dni_jefe) {
 		this.dni_jefe = dni_jefe;
 	}
-	public Emp_Asignados getEmpleado() {
-		return empleado;
+	public Emp_Asignados getEmp_asignados() {
+		return emp_asignados;
 	}
-	public void setEmpleado(Emp_Asignados empleado) {
-		this.empleado = empleado;
+	public void setEmp_asignados(Emp_Asignados emp_asignados) {
+		this.emp_asignados = emp_asignados;
 	}
 	
 

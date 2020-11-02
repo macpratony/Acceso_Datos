@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Libro precio="20.0">
+    <Titulo>Angeles y demonios</Titulo>
+    <Autores>Dan Brown</Autores>
+    <Editorial>Planeta</Editorial>
+</Libro>
