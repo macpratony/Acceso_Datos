@@ -71,13 +71,13 @@ public class AttributoClass {
     /**
      * Define el valor de la propiedad value.
      * 
-     * @param value
+     * @param bigInteger
      *     allowed object is
      *     {@link BigInteger }
      *     
      */
-    public void setValue(BigInteger value) {
-        this.value = value;
+    public void setValue(BigInteger bigInteger) {
+        this.value = bigInteger;
     }
 
     /**

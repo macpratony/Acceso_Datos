@@ -426,7 +426,7 @@ public class Doc {
         protected List<Intervalo> seats;
         @XmlElement(required = true)
         @XmlSchemaType(name = "date")
-        protected XMLGregorianCalendar date;
+        protected String date;
         @XmlElement(required = true)
         protected String source;
         @XmlElement(required = true)
@@ -471,7 +471,7 @@ public class Doc {
          *     {@link XMLGregorianCalendar }
          *     
          */
-        public XMLGregorianCalendar getDate() {
+        public String getDate() {
             return date;
         }
 
@@ -483,7 +483,7 @@ public class Doc {
          *     {@link XMLGregorianCalendar }
          *     
          */
-        public void setDate(XMLGregorianCalendar value) {
+        public void setDate(String value) {
             this.date = value;
         }
 
@@ -594,7 +594,7 @@ public class Doc {
         @XmlElement(required = true)
         protected String name;
         @XmlElement(required = true)
-        protected BigInteger passportnumber;
+        protected int passportnumber;
         @XmlElement(required = true)
         protected String address;
 
@@ -630,7 +630,7 @@ public class Doc {
          *     {@link BigInteger }
          *     
          */
-        public BigInteger getPassportnumber() {
+        public int getPassportnumber() {
             return passportnumber;
         }
 
@@ -642,7 +642,7 @@ public class Doc {
          *     {@link BigInteger }
          *     
          */
-        public void setPassportnumber(BigInteger value) {
+        public void setPassportnumber(int value) {
             this.passportnumber = value;
         }
 
@@ -705,7 +705,7 @@ public class Doc {
         @XmlElement(required = true)
         protected String flightRef;
         @XmlElement(required = true)
-        protected BigInteger passRef;
+        protected int passRef;
         @XmlElement(required = true)
         protected String creditCard;
 
@@ -741,7 +741,7 @@ public class Doc {
          *     {@link BigInteger }
          *     
          */
-        public BigInteger getPassRef() {
+        public int getPassRef() {
             return passRef;
         }
 
@@ -753,7 +753,7 @@ public class Doc {
          *     {@link BigInteger }
          *     
          */
-        public void setPassRef(BigInteger value) {
+        public void setPassRef(int value) {
             this.passRef = value;
         }
 

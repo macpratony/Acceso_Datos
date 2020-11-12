@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<doc xmlns="http://www.someElements.es">
+    <Airport airId="LHR">
+        <name>Barajas</name>
+        <tax>5</tax>
+    </Airport>
+    <Airport airId="PSA">
+        <name>Quito</name>
+        <tax>7</tax>
+    </Airport>
+    <Flight flightId="MX5625">
+        <seats class="tourist">25</seats>
+        <seats class="first">33</seats>
+        <date>25/08/2021</date>
+        <source>ZHR</source>
+        <destination>LHR</destination>
+    </Flight>
+    <Passenger>
+        <name>Roberto</name>
+        <passportnumber>154548797</passportnumber>
+        <address>Madrid - Alcorcon</address>
+    </Passenger>
+    <Reservation>
+        <flightRef>Volar</flightRef>
+        <passRef>326</passRef>
+        <creditCard>Mastercard</creditCard>
+    </Reservation>
+</doc>
