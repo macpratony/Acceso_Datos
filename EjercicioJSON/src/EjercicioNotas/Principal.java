@@ -1,13 +1,11 @@
 package EjercicioNotas;
 import java.io.FileNotFoundException;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
-import java.util.HashSet;
-
 import javax.swing.JOptionPane;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -31,6 +29,7 @@ public class Principal {
 		JSONParser parser = new JSONParser();
 		
 		try {
+			
 			Reader reader = new FileReader("aulas.json");	//Lee el archivo aula.json
 			JSONObject objetoJson = (JSONObject) parser.parse(reader); //Lo transfroma en objeto Json
 			JSONArray array = (JSONArray) objetoJson.get("aula1");  //Obtiene el array que se encuentra dentro de aula1
@@ -38,7 +37,9 @@ public class Principal {
 			String op = JOptionPane.showInputDialog("Ingrese una opcion");
 			
 			switch (op) {
+			
 			case "1": 
+				
 				System.out.println("*******Aula1*******");
 					System.out.println("");
 					for(int i=0; i<array.size();i++) { //Recorre el array de aula1
@@ -94,11 +95,14 @@ public class Principal {
 								
 					String reportSource = "./MiReport/ReportMateria.jrxml";
 					String reportPDF = "InformeMateria.pdf";
+					
 				try {
+					
 					JasperReport jasperReport = JasperCompileManager.compileReport(reportSource);
 					JRBeanCollectionDataSource datasource = new JRBeanCollectionDataSource(datos);
 					JasperPrint MiInforme = JasperFillManager.fillReport(jasperReport, null, datasource);
 					JasperExportManager.exportReportToPdfFile(MiInforme, reportPDF);
+					
 				} catch (JRException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -107,11 +111,12 @@ public class Principal {
 				break;
 				
 			case "3" :
+				
 				String alumno = JOptionPane.showInputDialog("Ingrese el nombre de un alumno");
 				String materia="";
 				String notaAlumno="";
 				ArrayList<DatosMateria> datos1 = new ArrayList<DatosMateria>();
-				HashSet<DatosMateria> d = new HashSet<DatosMateria>();
+				
 				
 				for(int i=0; i<array.size();i++) {
 					JSONObject ob = (JSONObject) array.get(i);
@@ -127,11 +132,11 @@ public class Principal {
 							
 							DatosMateria dato = new DatosMateria(materia, nombreAlumno, notaAlumno);
 							datos1.add(dato);
-							d.add(dato);
 						}
 					}
 					
 				}
+				
 				String reportSource1 = "./MiReport2/Report2.jrxml";
 				String reportPDF1 = "InformeBoletin.pdf";
 			try {
@@ -145,6 +150,7 @@ public class Principal {
 			}
 				
 				break;
+				
 			default:
 				throw new IllegalArgumentException("Unexpected value: " + op);
 			}
