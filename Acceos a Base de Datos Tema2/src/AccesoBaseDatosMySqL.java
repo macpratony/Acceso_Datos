@@ -15,12 +15,22 @@ public class AccesoBaseDatosMySqL {
 			
 			BufferedReader mac = new BufferedReader ( new InputStreamReader(System.in));
 		
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/colegio?serverTimezone=UTC","root","1234");
+			try {
+				Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+				
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
+		//	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/colegio?serverTimezone=UTC","root","1234");
+			Connection conn = DriverManager.getConnection("jdbc:odbc:BaseDeDatos");
 			
 			System.out.println("Introduzca el nombre del alumno a consultar");
 			String nombre = mac.readLine();
 			
-			PreparedStatement ps = conn.prepareStatement("SELECT * FROM alumnos WHERE nombres = ?");
+			PreparedStatement ps = conn.prepareStatement("SELECT * FROM cursoprueba WHERE nombre = ?");
 				ps.setString(1, nombre);
 				
 				
@@ -29,7 +39,7 @@ public class AccesoBaseDatosMySqL {
 			while(result.next()) {
 				System.out.print(result.getString(1)+" ");
 				System.out.print(result.getString(2)+" ");
-				System.out.println(result.getString(3));
+				//System.out.println(result.getString(3));
 			}
 			
 			
