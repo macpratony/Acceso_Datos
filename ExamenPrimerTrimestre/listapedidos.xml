@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<listaCompra>
+	<producto>
+		<nombre>chocolate</nombre>
+		<cantidad>5</cantidad>
+		<precioUnidad>6</precioUnidad>
+		<pendiente>AQUI SOLO FIGURARA SI O NO</pendiente>
+	</producto> 
+	
+<producto>
+<nombre>caramelos</nombre>
+<cantidad>2</cantidad>
+<precioUnidad>2</precioUnidad>
+<pendiente>si</pendiente>
+</producto>
+<producto>
+<nombre>bombom</nombre>
+<cantidad>3</cantidad>
+<precioUnidad>50</precioUnidad>
+<pendiente>si</pendiente>
+</producto>
+</listaCompra>
