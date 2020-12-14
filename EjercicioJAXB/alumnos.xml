@@ -2,8 +2,9 @@
 <alumnos>
     <alumno nota="10">
         <dni>111</dni>
+        <nombre>carlos</nombre>
         <asignaturas>
-            <nombre>lengua</nombre>
+            <nombre>FISICA</nombre>
             <profesor>javi</profesor>
         </asignaturas>
         <asignaturas>
@@ -13,6 +14,7 @@
     </alumno>
     <alumno nota="8">
         <dni>222</dni>
+        <nombre>silvia</nombre>
         <asignaturas>
             <nombre>lengua</nombre>
             <profesor>javi</profesor>

@@ -1,0 +1,18 @@
+<proyectos>
+	<proyecto>
+		<nombre>Arquitectura</nombre>
+		<dni_jefe>003</dni_jefe>
+		<emp_asignados>
+			<dni>004</dni>
+			<dni>005</dni>
+		</emp_asignados>
+	</proyecto>
+	<proyecto>
+		<nombre>Museo</nombre>
+		<dni_jefe>001</dni_jefe>
+		<emp_asignados>
+			<dni>003</dni>
+			<dni>002</dni>
+		</emp_asignados>
+	</proyecto>
+</proyectos>

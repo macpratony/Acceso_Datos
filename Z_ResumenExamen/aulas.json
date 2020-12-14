@@ -1,0 +1,27 @@
+{
+    "aula1":[
+        {"nombre":"Carlos","notas":[
+                                {"materia":"Matematicas","nota":10},
+                                {"materia":"Fisica","nota":7},
+                                {"materia":"Lengua","nota":6}
+                                
+                            ]
+        },
+        {"nombre":"Mario","notas":[
+                                {"materia":"Matematicas","nota":6},
+                                {"materia":"Fisica","nota":8},
+                                {"materia":"Lengua","nota":10}
+                            
+                            ]
+        },
+        {"nombre":"Ruben","notas":[
+                                {"materia":"Matematicas","nota":9},
+                                {"materia":"Fisica","nota":6},
+                                {"materia":"Lengua","nota":7}
+                            
+                            ]
+        }
+   
+    ]
+    
+}

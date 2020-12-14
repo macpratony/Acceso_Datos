@@ -1,0 +1,14 @@
+<pisos>
+    <piso>
+        <direccion>C/ higuera,  8</direccion>
+        <mensualidad>500</mensualidad>
+        <nif_empleado>001</nif_empleado>
+    </piso>
+
+    <piso>
+        <direccion>C/ madrid,  8</direccion>
+        <mensualidad>900</mensualidad>
+        <nif_empleado>002</nif_empleado>
+    </piso>
+    
+</pisos>

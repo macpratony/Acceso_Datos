@@ -5,6 +5,7 @@ import org.w3c.dom.NodeList;
 
 public class Recursividad {
 	//Recibe por parametro un lista de nodos para extraer la raiz
+	
 	static void recursivo(NodeList principal) {
 		
 		Node raiz = principal.item(0); //Extrae el nodo principal 
@@ -14,7 +15,7 @@ public class Recursividad {
 		 * encuentra corresponde a un elemento nodo o que es lo mismo que no corresponda a un salto de linea, 
 		 * si es asi vuelve a llamarse asi mismo e imprimimos el nombre del nodo donde se encuentra en ese momento*/
 		/*
-		 * Est o funciona pasandole un nodo por parametro
+		 * Esto funciona pasandole un nodo por parametro
 		if(principal != null) {
 			if(principal.getNodeType() == Node.ELEMENT_NODE) {
 			System.out.println(principal.getNodeName() +"-------- "+principal.getFirstChild().getNodeValue());
@@ -27,6 +28,7 @@ public class Recursividad {
 			}
 			
 		}*/
+		
 		for(int i=0; i<nodos.getLength();i++) {
 			Node primero = nodos.item(i);
 			if(primero.getNodeType() == Node.ELEMENT_NODE) {

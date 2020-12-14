@@ -65,6 +65,10 @@ public class GestionCliente extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
+				/*Para crear un archivo xml no se requiere ninguna libreria especial
+				 * Toda creacion de un archivo xml empieza por el DocumentBuilderFactory
+				 */
+				
 				DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 				DocumentBuilder builder;
 				try {

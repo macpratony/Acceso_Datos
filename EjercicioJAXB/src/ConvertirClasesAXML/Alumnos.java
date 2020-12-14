@@ -23,8 +23,8 @@ public class Alumnos {
 
 	public List<Alumno> getAlumno() {
 		
-		if(alumno == null)
-			return new ArrayList<Alumno>();
+		/*if(alumno == null)
+			return new ArrayList<Alumno>();*/
 		
 		return alumno;
 	}

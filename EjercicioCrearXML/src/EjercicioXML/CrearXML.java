@@ -23,6 +23,9 @@ public class CrearXML {
 
 	public static void main(String[] args) throws ParserConfigurationException, TransformerFactoryConfigurationError, TransformerException {
 		
+		/*Para crear un archivo xml no se requiere ninguna libreria especial
+		 * Toda creacion de un archivo xml empieza por el DocumentBuilderFactory
+		 */
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = factory.newDocumentBuilder();
 		

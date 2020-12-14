@@ -22,7 +22,7 @@ public class AccesoBaseDatos {
 			Connection conn = DriverManager.getConnection("jdbc:sqlite:C:\\SqLite\\sqlite-tools-win32-x86-3300100\\alumno.bd");
 		/*
 			Statement sentencia = conn.createStatement();//Clase sentencia basica generica que se crea a partir de la conexion
-			//sentencia.executeUpdate("INSERT INTO usuario VALUES ('Jose',9)"); //sentencia de insert, delete, uddate
+			//sentencia.executeUpdate("INSERT INTO usuario VALUES ('Jose',9)"); //sentencia de insert, delete, update
 			//sentencia.executeQuery("select * from usuario");//sentencia de consulta
 			
 			ResultSet registros = sentencia.executeQuery("select * from usuario"); //Recoge el resultado de la consulta para luego recorrerlo y mostrar lo

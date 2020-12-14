@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<libros>
+	
+    <libro >
+        <autor>ende</autor>
+        <titulo>momo</titulo>
+        <fecha>15-10-2020</fecha>
+    </libro>
+    <er>hola</er>
+    <libro publicado="1916">
+        <autor>verne</autor>
+        <titulo>luna</titulo>
+    </libro>
+    <libro publicado="1920">
+        <autor>cervantes</autor>
+        <titulo>quijote</titulo>
+    </libro>
+    
+    
+</libros>

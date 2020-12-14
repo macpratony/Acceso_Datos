@@ -23,15 +23,19 @@ import org.w3c.dom.Text;
 public class InsertarPedido {
 	
 	public static void insertaPedido(Node nodo, Document doc) throws TransformerFactoryConfigurationError, TransformerException {
-	
-		Element nodo_pedido = doc.createElement("pedido");
-		nodo.appendChild(nodo_pedido);
 		
-		Element nodoid = doc.createElement("id");
-		nodo_pedido.appendChild(nodoid);
-		String idProducto = JOptionPane.showInputDialog("Ingrese el id del producto");
-		Text texto_nodoid = doc.createTextNode(idProducto);
-		nodoid.appendChild(texto_nodoid);
+		/*Recibe por parametro el nodo raiz PEDIDOS y a traves de ello 
+		 * empieza a contruir un nuevo arbol
+		 */
+		
+		Element nodo_pedido = doc.createElement("pedido"); //Crea el sub nodo principal
+		nodo.appendChild(nodo_pedido); //Asigna al arbol el pedido creado
+		
+		Element nodoid = doc.createElement("id"); //Crea la siguiente etiqueta que va dentro de pedido
+		nodo_pedido.appendChild(nodoid); //lo mete dentro de la etiqueta pedido
+		String idProducto = JOptionPane.showInputDialog("Ingrese el id del producto"); //Solicita por teclado el valor que va dentro de la etiqueta id
+		Text texto_nodoid = doc.createTextNode(idProducto); //transforma el dato recibido 
+		nodoid.appendChild(texto_nodoid); //introduce el dato recibido dentro de la etiqueta id
 		
 		Element nodoNombre = doc.createElement("nombre");
 		nodo_pedido.appendChild(nodoNombre);

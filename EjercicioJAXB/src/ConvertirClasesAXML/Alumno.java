@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType(propOrder = {"nif","nota","asignaturas"})
+@XmlType(propOrder = {"nif","nombre","nota","asignaturas"}) //Especifica el orden con el que quiere que aparezca el XML
 public class Alumno {
 	
 	String nombre, nif, nota;
@@ -29,7 +29,7 @@ public class Alumno {
 	}
 	
 	
-	@XmlTransient
+	//@XmlTransient // Hace que no aparezca en el XML la etiqueta nombre
 	public String getNombre() {
 		return nombre;
 	}
@@ -37,7 +37,7 @@ public class Alumno {
 		this.nombre = nombre;
 	}
 	
-	@XmlElement(name = "dni")
+	@XmlElement(name = "dni") //Hace que al general el xml la etiqueta nif aparezca como dni
 	public String getNif() {
 		return nif;
 	}
@@ -45,7 +45,7 @@ public class Alumno {
 		this.nif = nif;
 	}
 	
-	@XmlAttribute
+	@XmlAttribute            // Especifica que es un atributo
 	public String getNota() {
 		return nota;
 	}
@@ -54,8 +54,8 @@ public class Alumno {
 	}
 	public List<Asignatura> getAsignaturas() {
 		
-		if(asignaturas == null)
-			return new ArrayList<Asignatura>();
+		/*if(asignaturas == null)
+			return new ArrayList<Asignatura>();*/
 		
 		return asignaturas;
 	}
