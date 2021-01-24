@@ -12,7 +12,7 @@ public class Principal {
 	public static void main(String[] args) {
 		
 		int op = Integer.parseInt(JOptionPane.showInputDialog("Ingrese una opcion"));
-		
+		 
 		switch (op) {
 		case 1:
 			Operaciones.insertarEmpleado();
@@ -25,9 +25,14 @@ public class Principal {
 			logger.info("Accediendo al metodo de insertar departamento");
 			break;
 			
+		case 3:
+			
+			Operaciones.mostrarEmpleadosDepartamento();
+			break;
+			
 		}
-		
-		
+		 
+		 
 		
 		
 	}

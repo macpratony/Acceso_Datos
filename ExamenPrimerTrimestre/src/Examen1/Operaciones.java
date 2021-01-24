@@ -2,6 +2,7 @@ package Examen1;
 
 import java.io.File;
 
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -127,7 +128,7 @@ public class Operaciones {
 			Document doc = builder.parse(new File("listapedidos.xml"));
 			
 			Node nodo = doc.getFirstChild();
-			
+			NodeList cambia = null;
 			NodeList nodoProducto = nodo.getChildNodes();
 			for(int i=0; i<nodoProducto.getLength();i++) {
 				if(nodoProducto.item(i).getNodeType() == Node.ELEMENT_NODE) {
@@ -137,21 +138,49 @@ public class Operaciones {
 						for(int x=0; x<nodoNombre.getLength(); x++) {
 							if(nodoNombre.item(x).getNodeType()== Node.ELEMENT_NODE) {
 								if(nodoNombre.item(x).getNodeName().equals("nombre")) {
-									
-									String nombreProducto = nodoNombre.item(x).getFirstChild().getNodeValue();
-									if(nombreProducto.equals(nombre)) {
-										
-										if(nodoNombre.item(x).getNodeName().equals("pendiente")) {
+										String nombre1 = nodoNombre.item(x).getFirstChild().getNodeValue();
+										if(nombre1.equals(nombre)) {
 											
+											cambia = nodoProducto.item(i).getChildNodes();
 										}
-										
-									}
+									
 								}
 							}
 						}
 					}
 				}
 			}
+			String nomb = "";
+			String cantidad = "";
+			String precio = "";
+			String pendiente = "NO";
+			
+			for(int i=0; i<cambia.getLength();i++) {
+				if(cambia.item(i).getNodeType() == Node.ELEMENT_NODE) {
+					if(cambia.item(i).getNodeName().equals("nombre")) {
+						nomb = cambia.item(i).getFirstChild().getNodeValue();
+					}
+					if(cambia.item(i).getNodeName().equals("cantidad")) {
+						cantidad = cambia.item(i).getFirstChild().getNodeValue();
+					}
+					if(cambia.item(i).getNodeName().equals("precioUnidad")) {
+						precio = cambia.item(i).getFirstChild().getNodeValue();
+					}
+					if(cambia.item(i).getNodeName().equals("pendiente")) {
+						pendiente = cambia.item(i).getFirstChild().getNodeValue();
+					}
+					
+				}
+			}
+			
+			for(int i=0; i<cambia.getLength();i++) {
+				Node n = cambia.item(i).getFirstChild();
+				cambia.item(i).setTextContent("nooooooo");
+			}
+			
+			
+			
+			
 			
 		} catch (ParserConfigurationException e) {
 			// TODO Auto-generated catch block
@@ -201,12 +230,16 @@ public class Operaciones {
 			JAXBContext jaxbContext = JAXBContext.newInstance(ListaCompra.class);
 		Unmarshaller u = jaxbContext.createUnmarshaller();
 		ListaCompra compra = (ListaCompra)u.unmarshal(new File("listapedidos.xml"));
+
 		ArrayList<Ireport> report = new ArrayList<>();
 		
 		for (Producto c : compra.getProducto()) {
 			String pendiente = c.getPendiente();
 			if(pendiente.equals("si")) {
-				
+				String nombre = c.getNombre();
+				String cantidad = c.getCantidad();
+				Ireport ire = new Ireport(nombre, cantidad);
+				report.add(ire);
 			}
 				
 		}
@@ -214,10 +247,7 @@ public class Operaciones {
 		String reportSource = "./Mireport/Mireport2.jrxml"; //
 	
 		String reportPDF = "Informe.pdf";
-		
 
-
-		
 		
 			JasperReport jasperReport = JasperCompileManager.compileReport(reportSource);
 			

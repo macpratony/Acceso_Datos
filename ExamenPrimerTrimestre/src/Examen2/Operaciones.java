@@ -1,6 +1,7 @@
 package Examen2;
 
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -49,10 +50,10 @@ public class Operaciones {
 			String dni = JOptionPane.showInputDialog("Ingrese el dni del jefe");
 			String nombreDepar = JOptionPane.showInputDialog("Ingrese el nombre del departamento");
 			
-			PreparedStatement ps = conexion.prepareStatement("INSERT INTO departamentos (NUM_DEP, NOMBRE,DNI_NIF_JEFE_PROY) VALUES (?,?,?)",PreparedStatement.RETURN_GENERATED_KEYS);
-			ps.setInt(1, 1);
-			ps.setString(2, nombreDepar);
-			ps.setString(3, dni);
+			PreparedStatement ps = conexion.prepareStatement("INSERT INTO departamentos (NOMBRE,DNI_NIF_JEFE_DEP) VALUES (?,?)");
+			
+			ps.setString(1, nombreDepar);
+			ps.setString(2, dni);
 			ps.executeUpdate();
 			
 	
@@ -62,7 +63,7 @@ public class Operaciones {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		 
 	}
 	
 	public static void mostrarEmpleadosDepartamento() {
@@ -77,9 +78,11 @@ public class Operaciones {
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
 				PreparedStatement ps1 = conexion.prepareStatement("SELECT DNI_NIF_EMP FROM asig_departamentos WHERE NUM_DEP=?");
-				ps.setInt(1, rs.getInt(1));
+				int numero = rs.getInt(1);
+				ps1.setInt(1, numero);
 				
 				ResultSet rs1 = ps1.executeQuery();
+				
 				while(rs1.next()) {
 					PreparedStatement ps2 = conexion.prepareStatement("SELECT NOMBRE FROM empleados WHERE DNI_NIF=?");
 					ps2.setInt(1, rs1.getInt(1));
