@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 18 ene. 2021 11:23:32 by Hibernate Tools 5.2.12.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="metro_madrid" dynamic-insert="false" dynamic-update="false" mutable="true" name="clases.marcoprado.com.Estaciones" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="estaciones">
+        <id name="codEstacion" type="int">
+            <column name="cod_estacion"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="nombre" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="nombre"/>
+        </property>
+        <property generated="never" lazy="false" name="direccion" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="direccion"/>
+        </property>
+        <property generated="never" lazy="false" name="numAccesos" optimistic-lock="true" type="int" unique="false">
+            <column name="num_accesos" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="numLineas" optimistic-lock="true" type="int" unique="false">
+            <column name="num_lineas" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="numViajesdestino" optimistic-lock="true" type="int" unique="false">
+            <column name="num_viajesdestino" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="numViajesprocedencia" optimistic-lock="true" type="int" unique="false">
+            <column name="num_viajesprocedencia" not-null="true"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="lineaEstacions" optimistic-lock="true" sort="unsorted" table="linea_estacion">
+            <key on-delete="noaction">
+                <column name="cod_estacion" not-null="true"/>
+            </key>
+            <one-to-many class="clases.marcoprado.com.LineaEstacion" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="accesoses" optimistic-lock="true" sort="unsorted" table="accesos">
+            <key on-delete="noaction">
+                <column name="cod_estacion" not-null="true"/>
+            </key>
+            <one-to-many class="clases.marcoprado.com.Accesos" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="viajesesForEstacionDestino" optimistic-lock="true" sort="unsorted" table="viajes">
+            <key on-delete="noaction">
+                <column name="estacion_destino" not-null="true"/>
+            </key>
+            <one-to-many class="clases.marcoprado.com.Viajes" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="viajesesForEstacionOrigen" optimistic-lock="true" sort="unsorted" table="viajes">
+            <key on-delete="noaction">
+                <column name="estacion_origen" not-null="true"/>
+            </key>
+            <one-to-many class="clases.marcoprado.com.Viajes" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>
