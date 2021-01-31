@@ -1,0 +1,8 @@
+#
+# Generated with Matisse Schema Definition Language 9.1.12
+# Generation date: Sun Jan 31 12:53:16 2021
+#
+# Mapping of Java classes and indexes to the corresponding database schema objects
+#
+clientesPedidos.Clientes = clientesPedidos.Clientes
+clientesPedidos.Pedidos = clientesPedidos.Pedidos

@@ -18,7 +18,7 @@ public class Principal {
 
 	
 	public static void main(String[] args) throws IOException {
-		
+		 
 		BufferedReader mac = new BufferedReader ( new InputStreamReader(System.in));
 		
 		//las tres lineas de acontinuacion eliminan los informes que genera el hibernate en la consola
