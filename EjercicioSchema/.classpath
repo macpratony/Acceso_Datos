@@ -6,20 +6,20 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Turno2/Desktop/DAM2/Acceso_Datos/EjercicioJAXB/mod/codemodel.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Turno2/Desktop/DAM2/Acceso_Datos/EjercicioJAXB/mod/dtd-parser.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Turno2/Desktop/DAM2/Acceso_Datos/EjercicioJAXB/mod/FastInfoset.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Turno2/Desktop/DAM2/Acceso_Datos/EjercicioJAXB/mod/istack-commons-runtime.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Turno2/Desktop/DAM2/Acceso_Datos/EjercicioJAXB/mod/istack-commons-tools.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Turno2/Desktop/DAM2/Acceso_Datos/EjercicioJAXB/mod/javax.activation-api.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Turno2/Desktop/DAM2/Acceso_Datos/EjercicioJAXB/mod/jaxb-api.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Turno2/Desktop/DAM2/Acceso_Datos/EjercicioJAXB/mod/jaxb-jxc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Turno2/Desktop/DAM2/Acceso_Datos/EjercicioJAXB/mod/jaxb-runtime.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Turno2/Desktop/DAM2/Acceso_Datos/EjercicioJAXB/mod/jaxb-xjc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Turno2/Desktop/DAM2/Acceso_Datos/EjercicioJAXB/mod/relaxng-datatype.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Turno2/Desktop/DAM2/Acceso_Datos/EjercicioJAXB/mod/rngom.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Turno2/Desktop/DAM2/Acceso_Datos/EjercicioJAXB/mod/stax-ex.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Turno2/Desktop/DAM2/Acceso_Datos/EjercicioJAXB/mod/txw2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Turno2/Desktop/DAM2/Acceso_Datos/EjercicioJAXB/mod/xsom.jar"/>
+	<classpathentry kind="lib" path="mod/codemodel.jar"/>
+	<classpathentry kind="lib" path="mod/dtd-parser.jar"/>
+	<classpathentry kind="lib" path="mod/FastInfoset.jar"/>
+	<classpathentry kind="lib" path="mod/istack-commons-runtime.jar"/>
+	<classpathentry kind="lib" path="mod/istack-commons-tools.jar"/>
+	<classpathentry kind="lib" path="mod/javax.activation-api.jar"/>
+	<classpathentry kind="lib" path="mod/jaxb-api.jar"/>
+	<classpathentry kind="lib" path="mod/jaxb-jxc.jar"/>
+	<classpathentry kind="lib" path="mod/jaxb-runtime.jar"/>
+	<classpathentry kind="lib" path="mod/jaxb-xjc.jar"/>
+	<classpathentry kind="lib" path="mod/relaxng-datatype.jar"/>
+	<classpathentry kind="lib" path="mod/rngom.jar"/>
+	<classpathentry kind="lib" path="mod/stax-ex.jar"/>
+	<classpathentry kind="lib" path="mod/txw2.jar"/>
+	<classpathentry kind="lib" path="mod/xsom.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
