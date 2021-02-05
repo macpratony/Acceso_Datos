@@ -67,14 +67,14 @@ public class PasarToken {
 					System.out.println("Participante "+participante+" recibiendo token del proceso "+datagram2.getPort());
 
 					/* Mando token */
-					InetAddress addrSig=InetAddress.getByName("localhost");
+				/*	InetAddress addrSig=InetAddress.getByName("localhost");
 					DatagramPacket datagramSig=
 							new DatagramPacket("token".getBytes(),
 									"token".getBytes().length,
 									addrSig, participante==NParticipantes?
-											portBase+1portBase+participante+1);							
-					datagramSocket.send(datagramSig);
-					
+										//	portBase+1portBase+participante+1);							
+					//datagramSocket.send(datagramSig);
+					*/
 				}
 				
 				
