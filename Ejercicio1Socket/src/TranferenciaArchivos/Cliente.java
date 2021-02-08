@@ -1,13 +1,17 @@
 package TranferenciaArchivos;
 
+import java.io.BufferedReader;
 import java.io.DataInputStream;
 
+
 import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;import java.io.InputStream;
+
+import java.io.FileReader;
+import java.io.IOException;
+
 import java.net.Socket;
-import java.net.UnknownHostException;
+
+
 
 public class Cliente {
 
@@ -15,25 +19,37 @@ public class Cliente {
 		//Tranferir una pareja de programa que transfieran un fichero entre ellos.
 		//el programa A deberá leer un fichero del disco y enviarlo a B. B recibirá el contenido
 		//del fichero y lo imprimirá por su salida estandar. Utiliza para ello sockets stream
+		final int puerto = 8888;
+		BufferedReader br;
+		DataInputStream in;
+		DataOutputStream out;
 		
+		Socket sc;
+			
 		try {
-//			File fichero = new File("script.txt");
-//			DataInputStream dis = new DataInputStream(new FileInputStream(fichero));
-//			String cadena = dis.readUTF();
-			Socket cliente = new Socket("localhost",9999);
+			sc = new Socket("localhost", puerto);
 			
-			DataOutputStream dos = new DataOutputStream(cliente.getOutputStream());
-			dos.writeUTF("Hola");
+			System.out.println("Enviando mensaje al servidor desde el cliente");
+			out = new DataOutputStream(sc.getOutputStream());
 			
-			dos.close();
+			br = new BufferedReader(new FileReader("script.txt"));
+			String aux;
+			String cadena = "";
+			while((aux = br.readLine()) != null) {
+				cadena = cadena+ aux+"\n";
+				
+			}
+			out.writeUTF(cadena);
 			
 			
-		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
-			System.out.println(e.getMessage()+"ni idea");
+			
+			
+			sc.close();
+			
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			System.out.println(e.getMessage()+" ni idea señor");
+			e.printStackTrace();
 		}
 		
 
