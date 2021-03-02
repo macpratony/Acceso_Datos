@@ -40,10 +40,7 @@ public class Cliente {
 				
 			}
 			out.writeUTF(cadena);
-			
-			
-			
-			
+
 			sc.close();
 			
 			

@@ -120,7 +120,7 @@ public class Principal {
 								
 							case 4:
 								
-								System.out.println("Ingrese el id del proyecto al que le desea cambia el jefe");
+								System.out.println("Ingrese el id del proyecto al que le desea cambiar el jefe");
 								int idP = Integer.parseInt(mac.readLine());
 									Proyecto proyc = manager.find(Proyecto.class, idP);
 									if(proyc != null){

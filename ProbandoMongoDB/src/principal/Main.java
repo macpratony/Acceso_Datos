@@ -27,11 +27,11 @@ public class Main {
 //			System.out.println(consulta.get(i).get("nombre"));
 //			System.out.println(consulta.get(i).get("edad"));
 //		}
-//		Document amigo = new Document();
-//		amigo.put("nombre", "Pepito2");
-//		amigo.put("edad", 25);
-//		
-//		coleccion.insertOne(amigo);
+		Document amigo = new Document();
+		amigo.put("nombre", "Pepito2");
+		amigo.put("edad", 25);
+		
+		coleccion.insertOne(amigo);
 
 //		// insertar otro documento en amigos
 //		Document amigo2 = new Document("nombre", "Pedro").append("edad", 35);

@@ -22,7 +22,7 @@ import javax.persistence.Table;
 public class Empleado implements Serializable{
 	
 	@Id
-	//@GeneratedValue(strategy = GenerationType.AUTO)
+	//@GeneratedValue(strategy = GenerationType.AUTO) ESTA ANOTACION SE PONE SOLO SI QUEREMOS QUE LA CLAVE SEA AUTOINCREMENT
 	private String dni;
 	
 	//si el nombre del atributo se corresponde con el nombre que el de la base de datos
