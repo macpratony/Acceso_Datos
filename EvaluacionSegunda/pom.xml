@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>es.marco.examen.segunda</groupId>
+  <artifactId>EvaluacionSegunda</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>EvaluacionSegunda</name>
+  <description>Evaluacion Segunda</description>
+  
+  <dependencies>
+  <dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>8.0.18</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-core</artifactId>
+	    <version>5.2.18.Final</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/javax.activation/javax.activation-api -->
+	<dependency>
+	    <groupId>javax.activation</groupId>
+	    <artifactId>javax.activation-api</artifactId>
+	    <version>1.2.0</version>
+	</dependency>
+	
+	<dependency>
+    <groupId>org.javassist</groupId>
+    <artifactId>javassist</artifactId>
+    <version>3.25.0-GA</version>
+</dependency>
+  </dependencies>
+</project>

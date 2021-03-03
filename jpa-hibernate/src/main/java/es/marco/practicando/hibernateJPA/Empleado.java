@@ -1,42 +1,32 @@
-package es.marco;
-
-import java.io.Serializable;
+package es.marco.practicando.hibernateJPA;
 
 import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+
+
 @Entity
-@Table(name = "empleado")
-public class Empleado implements Serializable{
+@Table(name= "empleado")
+public class Empleado {
 	
 	@Id
 	//@GeneratedValue(strategy = GenerationType.AUTO) ESTA ANOTACION SE PONE SOLO SI QUEREMOS QUE LA CLAVE SEA AUTOINCREMENT
 	private String dni;
 	
-	//si el nombre del atributo se corresponde con el nombre que el de la base de datos
-	//no hace falta poner la anotacion
-	//@Column(name = "nom_emp") 
+	@Column(name = "nom_emp")
 	private String nom_emp;
 	
-	//Este ejercicio tiene dos relaciones: 
-	//La primera un empleado puede ser jefe de varios proyectos OneToMany
+	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "jefe_proy")
 	private Set<Proyecto> dirige;
 	
-	//Segunda un 
 	@ManyToMany(mappedBy = "empleado")
 	private Set<Proyecto> proyecto;
 	
@@ -65,6 +55,7 @@ public class Empleado implements Serializable{
 	public void setNom_emp(String nom_emp) {
 		this.nom_emp = nom_emp;
 	}
+	
 	
 
 }

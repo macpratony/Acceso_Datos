@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 3 mar. 2021 12:16:31 by Hibernate Tools 5.2.12.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="examen_primera" dynamic-insert="false" dynamic-update="false" mutable="true" name="es.clases.marco.Cuentas" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="cuentas">
+        <id name="idCuenta" type="int">
+            <column name="id_cuenta"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="es.clases.marco.Clientes" embed-xml="true" fetch="select" insert="true" name="clientes" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column length="9" name="dni_cliente" not-null="true"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="saldo" optimistic-lock="true" type="int" unique="false">
+            <column name="saldo" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
