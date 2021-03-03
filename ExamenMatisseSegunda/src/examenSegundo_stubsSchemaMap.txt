@@ -1,0 +1,10 @@
+#
+# Generated with Matisse Schema Definition Language 9.1.12
+# Generation date: Wed Mar 03 13:26:56 2021
+#
+# Mapping of Java classes and indexes to the corresponding database schema objects
+#
+banco.Cliente = banco.Cliente
+banco.Cliente_pk = banco.Cliente_pk
+banco.Cuenta = banco.Cuenta
+banco.Cuenta_pk = banco.Cuenta_pk
